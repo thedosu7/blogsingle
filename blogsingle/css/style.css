@@ -337,7 +337,7 @@ html {
 
 hr {
   margin-bottom: 20px;
-  border: dashed 1px #ccc;
+  border: solid 1px #c6ac83;
 }
 
 /* List */
@@ -485,7 +485,8 @@ input[type='reset'],
 input[type='submit'] {
   line-height: 1;
   cursor: pointer;
-  -webkit-appearance: button;
+  /* -webkit-appearance: button; */
+  appearance: button;
   border: 0;
 }
 
@@ -501,8 +502,9 @@ input[type='radio'] {
 }
 
 input[type='search'] {
-  -webkit-appearance: textfield;
+  /* -webkit-appearance: textfield; */
   /* Addresses appearance set to searchfield in S5, Chrome */
+  appearance: textfield;
 }
 
 input[type='search']::-webkit-search-decoration {
@@ -715,7 +717,8 @@ input[type='submit'] {
   height: 51px;
   border: none;
   display: inline-block;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
+  appearance: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1039,14 +1042,14 @@ a:focus {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 999999999999999;
+  z-index: 1;
   height: 100%;
   width: 100%;
   background-color: #000;
 }
 
 .preload-container .middle {
-  top: 10%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -1060,6 +1063,7 @@ a:focus {
   transform: rotateX(-90deg);
 }
 .preload-container .let {
+  z-index: 1;
   margin: 0;
   padding: 0;
   font-family: 'Cerebri Sans', Arial, sans-serif;
@@ -1192,12 +1196,14 @@ a:focus {
   height: 50px;
   background-color: #c6ac83;
   font-family: 'Cerebri Sans', sans-serif;
+  border-radius: 0px;
 }
 .headerUp .row .col-sm-4:nth-child(3) button a {
   font-size: 14px;
   color: #fff;
   text-align: center;
   font-family: 'Cerebri Sans', sans-serif;
+  font-weight: normal;
 }
 .line-sm {
   height: 2px;
@@ -1219,6 +1225,15 @@ a:focus {
 }
 .navbar .wrapNav ul {
   padding: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-item {
+  margin-right: 40px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
 }
 .navbar .wrapNav ul li {
   display: inline-block;
@@ -1233,6 +1248,8 @@ a:focus {
 }
 .navbar .wrapNav ul li a:hover {
   color: #c6ac83;
+  border-bottom: 1px solid #c6ac83;
+  padding-bottom: 5px;
 }
 .navbar .languages p {
   color: #fff;
@@ -1241,7 +1258,9 @@ a:focus {
   font-size: 9px;
   color: #c6ac83;
 }
-
+.nav-link {
+  letter-spacing: 1px;
+}
 .navbar .row .col-1 .line-sm:nth-child(n + 2) {
   margin-top: 6px;
 }
@@ -1281,6 +1300,7 @@ a:focus {
   font-family: 'PS Demo', serif;
   font-size: 52px;
   color: #fff;
+  letter-spacing: 5px;
 }
 .banner {
   height: 473px;
@@ -1294,11 +1314,109 @@ a:focus {
   top: 0;
   left: 0;
   height: 100%;
+  filter: brightness(50%);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  position: absolute;
+  bottom: 30px;
+}
+.breadcrumbs ul li {
+  position: relative;
+  display: inline-block;
+  padding-right: 50px;
+}
+.breadcrumbs ul li:after {
+  position: absolute;
+  right: 7px;
+  height: 20px;
+  top: 0;
+  width: 33px;
+  background: url(../images/icon-row.png) no-repeat center center;
+  content: '';
+}
+.breadcrumbs ul li:last-child:after {
+  background: transparent;
+}
+.breadcrumbs a {
+  padding: 5px 0;
+  font-weight: 400;
+  color: #fff;
+  display: block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.breadcrumbs a:hover {
+  color: #c6ac83;
+}
+.language-list {
+  display: none;
+}
+
+.language-list.active {
+  display: block;
+}
+
+/* footer */
+.footer-widgets .widget {
+  padding: 66px 30px 72px 40px;
+}
+.footer-widgets .widget.widget_text .textwidget img {
+  margin-bottom: 17px;
+}
+.footer-widgets .widget.widget_text {
+  height: 100%;
+}
+.footer-widgets .widget.widget_text.left {
+  text-align: left;
+}
+.footer-widgets .widget.widget_text.right {
+  text-align: right;
+}
+.footer-widgets .widget.widget_text.center {
+  text-align: center;
+}
+.footer-widgets .widget.widget_text .widget-title {
+  color: #c6ac83;
+}
+.footer-widgets .widget.widget_text .textwidget {
+  line-height: 28px;
+  color: #fff;
+}
+.footer-widgets .widget .widget-title {
+  font-family: 'Cormorant Infant', sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-widgets .widget.widget_text .foot-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.footer-widgets .widget.widget_text .foot-text {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-widgets .copyright {
+  position: relative;
+  text-align: center;
+  color: #fff;
 }
 @media (min-width: 1400px) {
   .headerUp .row .col-sm-4 .infoTitleNav .ic {
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
   }
   .headerUp .row .col-sm-4 .infoTitleNav {
     margin-top: 6px;

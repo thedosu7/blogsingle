@@ -47,7 +47,10 @@
       }
     }
   };
-
+  document.querySelector('.languages').addEventListener('click', function () {
+    var languageList = this.querySelector('.language-list');
+    languageList.classList.toggle('active');
+  });
   // Dom Ready
   $(function () {
     headerFixed();

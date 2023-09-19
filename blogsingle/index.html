@@ -14,7 +14,7 @@
   </head>
   <body class="header-sticky">
     <!-- preload -->
-    <div class="preload preload-container">
+    <!-- <div class="preload preload-container">
       <div class="middle">
         <span class="let let1">l</span>
         <span class="let let2">o</span>
@@ -24,8 +24,9 @@
         <span class="let let6">n</span>
         <span class="let let7">g</span>
       </div>
-    </div>
+    </div> -->
     <!-- /preload -->
+    <!-- header -->
     <header>
       <div class="container-fluid headerUp">
         <div class="row">
@@ -99,24 +100,22 @@
           <div class="wrapNav col-8">
             <ul class="">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home"
-                  >HOME</a
-                >
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">PAGES</a>
+                <a class="nav-link" href="#">PAGES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">MENU</a>
+                <a class="nav-link" href="#">MENU</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">PORTFOLIO</a>
+                <a class="nav-link" href="#">PORTFOLIO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">BLOG</a>
+                <a class="nav-link" href="#">BLOG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">CONTACT</a>
+                <a class="nav-link" href="#">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -124,25 +123,96 @@
             <p>
               English <span><i class="fas fa-chevron-down"></i></span>
             </p>
+            <ul class="language-list">
+              <li><a href="#" title="Language 1">Language 1</a></li>
+              <li><a href="#" title="Language 2">Language 2</a></li>
+            </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="banner">
-        <img src="./images/bg.png" alt="bannerImg" />
-        <div class="content">
-          <div>
-            <h2>Blog Single</h2>
-            <p>
-              Stay up to date with the latest news about our restaurant and
-              <br />
-              upcoming events
-            </p>
+    <!-- /header -->
+    <section class="banner">
+      <img src="./images/bg.png" alt="bannerImg" />
+      <div class="content">
+        <div>
+          <h2>Blog Single</h2>
+          <p>
+            Stay up to date with the latest news about our restaurant and
+            <br />
+            upcoming events
+          </p>
+        </div>
+        <br />
+      </div>
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Blog Single</a></li>
+        </ul>
+      </div>
+      <!-- /Breadcrumbs -->
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-widgets">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="widget widget_text left">
+                <h5 class="widget-title">We are here</h5>
+                <div class="textwidget">
+                  <p>
+                    82 Place Charles de Gaulle, Paris <br />
+                    Brochetterestaurant@gmail.com <br />
+                    +39-055-123456
+                  </p>
+                </div>
+              </div>
+              <!-- /.widget -->
+            </div>
+            <div class="col-sm-4">
+              <div class="widget widget_text center">
+                <img class="foot-img" src="./images/Vector Smart Object.png" />
+                <h5 class="widget-title">
+                  <img class="foot-text" src="./images/basilico.png" />
+                </h5>
+                <div class="textwidget">
+                  <p>
+                    A distinctive, well-preserved and comfortable space,
+                    high-quality products, authentic cuisine, food and drinks
+                    are done flawlessly.
+                  </p>
+                </div>
+              </div>
+              <!-- /.widget -->
+            </div>
+            <div class="col-sm-4">
+              <div class="widget widget_text right">
+                <h5 class="widget-title">Opening time</h5>
+                <div class="textwidget">
+                  <p>
+                    Mon - Fri: 08:00 am - 09:00pm<br />
+                    Sat - Sun: 10:00 am - 11:00pm <br />
+                    Holiday: Close
+                  </p>
+                </div>
+              </div>
+              <!-- /.widget -->
+            </div>
+            <hr />
+            <div class="col-12">
+              <p class="copyright">© 2022 7iquid. All Rights Reserved.</p>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Javascript -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script
