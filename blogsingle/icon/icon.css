@@ -29,6 +29,7 @@
 .icon-item:before {
   content: '\e902';
   color: #c6ac83;
+  font-size: large;
 }
 .icon-Vector-Smart-Object:before {
   content: '\e900';

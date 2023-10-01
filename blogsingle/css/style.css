@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Thasadith:ital,wght@1,700&family=Yeseva+One&display=swap');
 @import '../icon/icon.css';
-@import 'responsive.css';
-@import 'swiper-bundle.min.css';
 @import '../font/font.css';
-@import 'animation.css';
-@import 'bootstrap.css';
+@import '../css/bootstrap.min.css';
+@import '../css/magnific-popup.css';
+@import '../css/font-awesome.min.css';
 /**
   	* Reset Browsers
     * General
@@ -1033,9 +1032,9 @@ a:focus {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-a:focus {
-  color: #c6ac83;
+.active,
+.nav-link:hover {
+  border-bottom: 1px solid #c6ac83;
 }
 /* preload */
 .preload-container {
@@ -1133,19 +1132,19 @@ a:focus {
   align-items: center;
 }
 .headerUp .row .col-sm-4:nth-child(2) .logo {
-  width: 108px;
-  height: 98px;
+  width: 50%;
+  height: 100%;
   border: 1px solid #c6ac83;
   border-top: 0;
-  border-radius: 0 0 80px 80px;
+  border-radius: 0 0 50% 50%;
   display: flex;
   justify-content: center;
   padding-top: 13px;
   background: #0e1618;
 }
 .headerUp .row .col-sm-4:nth-child(2) .logo .imgLogo {
-  width: 41px;
-  height: 75px;
+  width: 35%;
+  height: 80%;
 }
 .headerUp .row .col-sm-4:nth-child(2) .logo .imgLogo img {
   height: 100%;
@@ -1204,11 +1203,6 @@ a:focus {
   text-align: center;
   font-family: 'Cerebri Sans', sans-serif;
   font-weight: normal;
-}
-.line-sm {
-  height: 2px;
-  width: 35px;
-  background: #c6ac83;
 }
 .line-lg {
   height: 1px;
@@ -1320,7 +1314,7 @@ a:focus {
 /* Breadcrumbs */
 .breadcrumbs {
   position: absolute;
-  bottom: 30px;
+  bottom: 10%;
 }
 .breadcrumbs ul li {
   position: relative;
@@ -1329,10 +1323,10 @@ a:focus {
 }
 .breadcrumbs ul li:after {
   position: absolute;
-  right: 7px;
-  height: 20px;
+  right: 10%;
+  height: 100%;
   top: 0;
-  width: 33px;
+  width: 30%;
   background: url(../images/icon-row.png) no-repeat center center;
   content: '';
 }
@@ -1340,13 +1334,14 @@ a:focus {
   background: transparent;
 }
 .breadcrumbs a {
-  padding: 5px 0;
+  padding: 5% 0;
   font-weight: 400;
   color: #fff;
   display: block;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .breadcrumbs a:hover {
   color: #c6ac83;
 }
@@ -1360,7 +1355,7 @@ a:focus {
 
 /* footer */
 .footer-widgets .widget {
-  padding: 66px 30px 72px 40px;
+  padding: 66px 0px 20px 0px;
 }
 .footer-widgets .widget.widget_text .textwidget img {
   margin-bottom: 17px;
@@ -1369,10 +1364,10 @@ a:focus {
   height: 100%;
 }
 .footer-widgets .widget.widget_text.left {
-  text-align: left;
+  text-align: start;
 }
 .footer-widgets .widget.widget_text.right {
-  text-align: right;
+  text-align: end;
 }
 .footer-widgets .widget.widget_text.center {
   text-align: center;
@@ -1391,7 +1386,7 @@ a:focus {
   font-weight: 700;
   color: #fff;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 10%;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1400,10 +1395,11 @@ a:focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 12%;
+  margin-bottom: 5%;
 }
 .footer-widgets .widget.widget_text .foot-text {
-  width: 40%;
+  width: 25%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1412,6 +1408,150 @@ a:focus {
   position: relative;
   text-align: center;
   color: #fff;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+/* Section Blog Posts */
+.meta-post .sub-meta {
+  justify-content: space-between;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  color: #fff;
+  margin-right: 20%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.meta-post .sec1img {
+  width: 100%;
+}
+.meta-post .sub-meta li:first-child {
+  margin-right: 0;
+}
+.meta-post .sub-meta li:before {
+  content: '\2022';
+  margin-right: 2px;
+  color: #c6ac83;
+}
+.meta-post .title-post {
+  color: #fff;
+  font-family: 'Cormorant Infant', serif;
+}
+.meta-post .magnific-box {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  background: url(../images/sec1food.jpg);
+  width: 90%;
+}
+.meta-post .video-play {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c6ac83 !important;
+  font-size: 20px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0e1618;
+}
+.meta-post .line-h4 {
+  width: 30%;
+  background-image: linear-gradient(90deg, #32a852, #fc2b23) !important;
+}
+.meta-post .sub-p {
+  color: #fff;
+  font-size: 12px;
+}
+.meta-post .quote-img {
+  width: 5%;
+  height: 5%;
+  padding-right: 1vw;
+}
+.meta-post .quote-sub {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 1vw;
+  font-style: italic;
+}
+.meta-post .quote span {
+  font-size: 15px;
+  padding-left: 2vw;
+  text-transform: uppercase;
+}
+.meta-post .new-share {
+  justify-content: space-between;
+}
+.meta-post .tags-label {
+  text-transform: uppercase;
+}
+.meta-post .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.meta-post .comment h4 {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Cormorant Infant', serif;
+}
+.meta-post .customer h6 {
+  color: #fff;
+  font-family: 'Cormorant Infant', serif;
+}
+
+.comment .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 0 1vw 0;
+}
+
+.comment .flex .comment-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50%;
+}
+.comment .flex .comment-info .author {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.comment .flex .comment-info .date {
+  letter-spacing: 1px;
+  color: #fff;
+}
+.comment .flex .reply-button {
+  width: 5%;
+  height: 0;
+  background-color: #c6ac83;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment .flex .reply-button a {
+  color: #fff;
+  font-family: 'Cormorant Infant', serif;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment .sub-comment {
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 @media (min-width: 1400px) {
   .headerUp .row .col-sm-4 .infoTitleNav .ic {

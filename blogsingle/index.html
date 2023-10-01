@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Blog</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
-    />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
   <body class="header-sticky">
@@ -95,12 +90,14 @@
       <nav class="container-fluid navbar">
         <div class="row">
           <div class="col-1">
-            <span class="nav-link icon-item"></span>
+            <a href="#">
+              <span class="icon-item"></span>
+            </a>
           </div>
           <div class="wrapNav col-8">
-            <ul class="">
+            <ul id="menu">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                <a class="nav-link active" href="#">HOME</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">PAGES</a>
@@ -124,8 +121,8 @@
               English <span><i class="fas fa-chevron-down"></i></span>
             </p>
             <ul class="language-list">
-              <li><a href="#" title="Language 1">Language 1</a></li>
-              <li><a href="#" title="Language 2">Language 2</a></li>
+              <li><a href="#" title="Language 1">1</a></li>
+              <li><a href="#" title="Language 2">2</a></li>
             </ul>
           </div>
         </div>
@@ -155,12 +152,145 @@
       </div>
       <!-- /Breadcrumbs -->
     </section>
+
+    <!-- Blog Posts -->
+    <div class="tf-section tf-blog-detail pb-48 mt-40">
+      <div class="container blog-details">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-sm-6 meta-post">
+            <div class="flex justify-between mt-40 items-center">
+              <div class="sec1img">
+                <div class="magnific-box position-relative">
+                  <a
+                    class="video-play"
+                    href="https://www.youtube.com/embed/Y4UwssndcPA"
+                    ><i class="fas fa-play"></i>
+                  </a>
+                </div>
+                <ul class="sub-meta">
+                  <li>
+                    Written by <a href="#"> <u>Justine Nightingale</u></a> -
+                    Monday, June 6, 2022 at 08:00
+                  </li>
+                  <li>Tags: News, Restaurant Marketing, WPN</li>
+                </ul>
+              </div>
+            </div>
+            <h4 class="title-post">
+              Building a New Customer Base for Your Restaurant
+            </h4>
+            <hr class="line-h4" />
+            <div class="title-sub">
+              <p class="sub-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt utlabor met dolore magna sens aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                labori nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p class="sub-p">
+                Mollit anim id est laborum. Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem accusant tium doloremque laudan
+                tiumotam rem aperiam aq ue ipsa quae ab illo inventore veritatis
+                etquai sarchitecto beatae vitae dicta sunt expli cabos Nemoenim
+                ipsam voluptatem quia voluptas sitasper.
+              </p>
+            </div>
+            <hr class="line-lg" />
+
+            <div class="quote">
+              <div class="flex pt-4">
+                <img class="quote-img" src="images/quotes.png" />
+                <p class="quote-sub">
+                  “ How many times have you heard that paper is matter of the
+                  past? <br />
+                  Obviously, this panorama is not so drastic. From time to time
+                  we want to have the pleasure to hold a good travel guide. ”
+                </p>
+              </div>
+              <span>Margaret - Food critic</span>
+              <hr class="line-lg" />
+              <p class="sub-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt utlabor met dolore magna sens aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                labori nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="customer">
+              <h6>
+                What does a restaurant need to do to make customers happy?
+              </h6>
+              <p class="sub-p">
+                Aenean interdum eleifend eros eget rhoncus. Morbi lectus arcu,
+                viverra eu lacus ornare, dictum euismod nunc. Fusce luctus
+                tempor dui feugiat pellentesque. Duis velit diam, hendrerit sit
+                amet rutrum sed, rhoncus in dui. Praesent tellus diam, luctus
+                sed enim at, sollicitudin consectetur leo.
+              </p>
+              <img src="images/customer.png" />
+              <p class="sub-p">
+                Sed vitae velit erat. Pellentesque lobortis felis vel mi congue,
+                in sollicitudin orci tincidunt. Praesent turpis justo, posuere
+                eget justo sit amet, efficitur suscipit elit. Donec sit amet est
+                lorem. Sed mattis ipsum arcu, ac hendrerit diam aliquet eget.
+                Cras in libero in est euismod sodales.
+              </p>
+            </div>
+            <hr class="line-lg" />
+            <div class="new-share flex">
+              <div class="tags">
+                <span class="tags-label">Tags:</span>
+                <span style="color: #fff">
+                  News, Restaurant Marketing, WPN
+                </span>
+              </div>
+              <div class="icon">
+                <span class="tags-label">Share:</span>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-youtube"></i>
+                <i class="fa fa-tripadvisor"></i>
+                <i class="fa fa-twitter"></i>
+              </div>
+            </div>
+            <hr class="line-lg" />
+            <div class="comment">
+              <h4>comments</h4>
+              <div class="flex">
+                <img src="./images/comment.png" style="width: 10%" />
+                <div class="comment-info">
+                  <span class="author">Margaret</span>
+                  <span class="date">July 29, 2019 at 7:35 am</span>
+                </div>
+                <!-- <button class="reply-button">
+                  <a href="#"> <i class="fa fa-reply"></i>Reply</a>
+                </button> -->
+              </div>
+              <span class="sub-comment"
+                >“ Sed vitae velit erat. Pellentesque lobortis felis vel mi
+                congue, in sollicitudin orci tincidunt. Praesent turpis justo,
+                posuere eget justo sit amet, efficitur suscipit elit. “</span
+              >
+            </div>
+            <hr class="line-lg" />
+          </div>
+          <div class="col-sm-4 flex justify-between mt-40 items-center">
+            <div>KKKKKKKKKKKKKKKKK</div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </div>
+    <hr class="line-lg" />
+    <!-- /Blog Posts -->
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-widgets">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-1"></div>
+            <div class="col-sm-3 mt-auto">
               <div class="widget widget_text left">
                 <h5 class="widget-title">We are here</h5>
                 <div class="textwidget">
@@ -173,7 +303,7 @@
               </div>
               <!-- /.widget -->
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 mt-auto">
               <div class="widget widget_text center">
                 <img class="foot-img" src="./images/Vector Smart Object.png" />
                 <h5 class="widget-title">
@@ -189,7 +319,7 @@
               </div>
               <!-- /.widget -->
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3 mt-auto">
               <div class="widget widget_text right">
                 <h5 class="widget-title">Opening time</h5>
                 <div class="textwidget">
@@ -202,7 +332,13 @@
               </div>
               <!-- /.widget -->
             </div>
-            <hr />
+            <div class="col-1"></div>
+
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col-10"><div class="line-lg"></div></div>
+              <div class="col-1"></div>
+            </div>
             <div class="col-12">
               <p class="copyright">© 2022 7iquid. All Rights Reserved.</p>
             </div>
@@ -211,10 +347,10 @@
       </div>
     </footer>
     <!-- /Footer -->
-
     <!-- Javascript -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.min.js"></script>
+    <script src="js/magnific.popup.min.js"></script>
     <script
       src="https://kit.fontawesome.com/d44e121fb7.js"
       crossorigin="anonymous"
