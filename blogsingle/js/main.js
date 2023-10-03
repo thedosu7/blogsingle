@@ -58,6 +58,18 @@
       }
     }
   };
+  $(document).ready(function () {
+    $('.social-item').hover(function () {
+      $('.social-item').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+  $(document).ready(function () {
+    $('.tag-list a').hover(function () {
+      $('.tag-list a').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
   document.querySelector('.languages').addEventListener('click', function () {
     var languageList = this.querySelector('.language-list');
     languageList.classList.toggle('active');
@@ -86,7 +98,7 @@
             // Or a function that should return %id%, for example:
             // id: function(url) { return 'parsed id'; }
 
-            src: 'https://www.youtube.com/embed/Y4UwssndcPA', // URL that will be set as a source for iframe.
+            src: 'https://www.youtube.com/embed/h6VAQUws040?si=v8tTmvUFeiu-WsTK', // URL that will be set as a source for iframe.
           },
 
           // you may add here more sources
