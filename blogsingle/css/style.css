@@ -1092,12 +1092,13 @@ a:focus {
 }
 .headerUp .row .col-sm-4:nth-child(1) {
   padding-left: 0;
+  justify-content: flex-end;
 }
 .headerUp .row .col-sm-4:nth-child(3) {
   padding-right: 0;
 }
 .headerUp .row .col-sm-4:nth-child(3) {
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 .headerUp .row .col-sm-4:nth-child(2) {
   width: 20%;
@@ -1106,8 +1107,8 @@ a:focus {
   align-items: center;
 }
 .headerUp .row .col-sm-4:nth-child(2) .logo {
-  width: 50%;
-  height: 100%;
+  width: 8vw;
+  height: 7vw;
   border: 1px solid #c6ac83;
   border-top: 0;
   border-radius: 0 0 50% 50%;
@@ -1130,6 +1131,7 @@ a:focus {
 .headerUp .row .col-sm-4 .infoTitleNav {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
 }
 .headerUp .row .col-sm-4 .infoTitleNav .ic {
   border: 1px solid #c6ac83;
@@ -1156,20 +1158,21 @@ a:focus {
   color: #fff;
 }
 .headerUp .row .col-sm-4:nth-child(1) .infoTitleNav:nth-child(2) {
-  margin-left: 35px;
+  margin-left: 2vw;
 }
 .headerUp .row .col-sm-4:nth-child(3) .infoTitleNav {
-  margin-right: 35px;
+  margin-right: 2vw;
 }
 .headerUp .row .col-sm-4 .infoTitleNav .txtCon {
   margin-left: 16px;
 }
 .headerUp .row .col-sm-4:nth-child(3) button {
-  width: 180px;
-  height: 50px;
+  width: 10vw;
+  height: 4vw;
   background-color: #c6ac83;
   font-family: 'Cerebri Sans', sans-serif;
   border-radius: 0px;
+  white-space: nowrap;
 }
 .headerUp .row .col-sm-4:nth-child(3) button a {
   font-size: 14px;
@@ -1192,7 +1195,7 @@ a:focus {
   margin: 0;
 }
 .navbar .wrapNav ul {
-  padding: 22px;
+  padding: 1vw;
   display: flex;
   justify-content: space-between;
 }
@@ -1397,12 +1400,10 @@ a:focus {
 }
 /* Section Blog Posts */
 .meta-post .sub-meta {
-  justify-content: space-between;
   list-style-type: none;
   display: flex;
   padding: 0;
   color: #fff;
-  margin-right: 20%;
   padding-top: 1vw;
   padding-bottom: 1vw;
 }
@@ -1410,7 +1411,7 @@ a:focus {
   width: 100%;
 }
 .meta-post .sub-meta li:first-child {
-  margin-right: 0;
+  margin-right: 2vw;
 }
 .meta-post .sub-meta li:before {
   content: '\2022';
@@ -1482,6 +1483,19 @@ a:focus {
   align-items: center;
   gap: 10px;
 }
+.meta-post .icon i {
+  border: #c6ac83 solid 1px;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+.meta-post .icon i.active {
+  background-color: #c6ac83;
+}
+.meta-post .icon i:hover {
+  background-color: #c6ac83;
+}
 .meta-post .comment h4 {
   text-transform: uppercase;
   color: #fff;
@@ -1496,7 +1510,7 @@ a:focus {
 .comment .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1vw 0 1vw 0;
 }
 
@@ -1532,7 +1546,7 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 1vw;
+  font-size: 15px;
 }
 .comment .sub-comment {
   color: #fff;
@@ -1607,7 +1621,7 @@ a:focus {
 }
 /* side bar */
 .side-bar {
-  margin-left: 5vw;
+  margin-left: 1vw;
 }
 .chef {
   display: flex;
@@ -1846,15 +1860,56 @@ a:focus {
   color: #fff;
 }
 
-@media (min-width: 1400px) {
-  .headerUp .row .col-sm-4 .infoTitleNav .ic {
-    width: 45px;
-    height: 45px;
+/* CSS cho kích thước màn hình lớn hơn hoặc bằng 576px */
+@media (min-width: 576px) {
+  .headerUp .row .col-sm-4:nth-child(1),
+  .headerUp .row .col-sm-4:nth-child(3) {
+    width: 40%;
+  }
+  .headerUp .row .col-sm-4:nth-child(2) {
+    width: 20%;
+  }
+}
+
+/* CSS cho kích thước màn hình nhỏ hơn 576px */
+@media (max-width: 576px) {
+  .headerUp .row .col-sm-4:nth-child(1),
+  .headerUp .row .col-sm-4:nth-child(3),
+  .headerUp .row .col-sm-4:nth-child(2) {
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerUp .row .col-sm-4:nth-child(2) .logo {
+    width: 50px;
+    height: 50px;
+    padding-top: 0;
+  }
+  .headerUp .row .col-sm-4:nth-child(2) .logo .imgLogo {
+    width: 100%;
+    height: 100%;
   }
   .headerUp .row .col-sm-4 .infoTitleNav {
-    margin-top: 6px;
+    justify-content: center;
+    margin-top: 10px;
   }
-  .headerUp .row .col-sm-4 .infoTitleNav p {
-    font-size: 13px;
+  .headerUp .row .col-sm-4 .infoTitleNav .ic {
+    width: 30px;
+    height: 30px;
+  }
+  .svg-image {
+    width: 100%;
+    height: 30px;
+  }
+  .headerUp .row .col-sm-4 .infoTitleNav .txtCon {
+    margin-left: 10px;
+  }
+  .headerUp .row .col-sm-4:nth-child(3) button {
+    width: 80%;
+    height: 40px;
+  }
+  .headerUp .row .col-sm-4:nth-child(3) button a {
+    font-size: 12px;
   }
 }

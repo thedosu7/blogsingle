@@ -59,13 +59,19 @@
     }
   };
   $(document).ready(function () {
-    $('.social-item').hover(function () {
+    $('.social-item').on('click hover', function () {
       $('.social-item').removeClass('active');
       $(this).addClass('active');
     });
   });
   $(document).ready(function () {
-    $('.tag-list a').hover(function () {
+    $('.icon i').on('click hover', function () {
+      $('.icon i.active').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+  $(document).ready(function () {
+    $('.tag-list a').on('click hover', function () {
       $('.tag-list a').removeClass('active');
       $(this).addClass('active');
     });
